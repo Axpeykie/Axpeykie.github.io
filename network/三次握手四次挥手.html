@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>详解三次握手与四次挥手 | Axpeykie&#39;s blog</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    
+    <meta name="description" content="share!">
+    
+    <link rel="preload" href="/assets/css/0.styles.e4d8b86b.css" as="style"><link rel="preload" href="/assets/js/app.65ca9bb5.js" as="script"><link rel="preload" href="/assets/js/2.14a13fa9.js" as="script"><link rel="preload" href="/assets/js/26.07102b13.js" as="script"><link rel="prefetch" href="/assets/js/10.2f94525b.js"><link rel="prefetch" href="/assets/js/11.6a5cc2f2.js"><link rel="prefetch" href="/assets/js/12.90aa9cb7.js"><link rel="prefetch" href="/assets/js/13.475ad283.js"><link rel="prefetch" href="/assets/js/14.6cb0a9fd.js"><link rel="prefetch" href="/assets/js/15.7b3ce09f.js"><link rel="prefetch" href="/assets/js/16.f0a5d30e.js"><link rel="prefetch" href="/assets/js/17.ea63d749.js"><link rel="prefetch" href="/assets/js/18.b5af9e97.js"><link rel="prefetch" href="/assets/js/19.7e6f0376.js"><link rel="prefetch" href="/assets/js/20.b943776b.js"><link rel="prefetch" href="/assets/js/21.cd936ef8.js"><link rel="prefetch" href="/assets/js/22.66334dda.js"><link rel="prefetch" href="/assets/js/23.49c91fd5.js"><link rel="prefetch" href="/assets/js/24.f58389e9.js"><link rel="prefetch" href="/assets/js/25.cc2a94e5.js"><link rel="prefetch" href="/assets/js/27.50cef554.js"><link rel="prefetch" href="/assets/js/28.f5f36556.js"><link rel="prefetch" href="/assets/js/29.6a3fa8c9.js"><link rel="prefetch" href="/assets/js/3.32769151.js"><link rel="prefetch" href="/assets/js/30.8d82b854.js"><link rel="prefetch" href="/assets/js/4.63745a10.js"><link rel="prefetch" href="/assets/js/5.e36bd015.js"><link rel="prefetch" href="/assets/js/6.1017c97b.js"><link rel="prefetch" href="/assets/js/7.b60ae1a9.js"><link rel="prefetch" href="/assets/js/8.2523b28c.js"><link rel="prefetch" href="/assets/js/9.aa7b199d.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.e4d8b86b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Axpeykie's blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="博文" class="dropdown-title"><span class="title">博文</span> <span class="arrow down"></span></button> <button type="button" aria-label="博文" class="mobile-dropdown-title"><span class="title">博文</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/js/" class="nav-link">
+  JS
+</a></li><li class="dropdown-item"><!----> <a href="/css.html" class="nav-link">
+  css
+</a></li><li class="dropdown-item"><!----> <a href="/network/" class="nav-link router-link-active">
+  网络通信
+</a></li><li class="dropdown-item"><!----> <a href="/vue.html" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/算法/" class="nav-link">
+  算法
+</a></li></ul></div></div><div class="nav-item"><a href="/about.html" class="nav-link">
+  关于
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="博文" class="dropdown-title"><span class="title">博文</span> <span class="arrow down"></span></button> <button type="button" aria-label="博文" class="mobile-dropdown-title"><span class="title">博文</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/js/" class="nav-link">
+  JS
+</a></li><li class="dropdown-item"><!----> <a href="/css.html" class="nav-link">
+  css
+</a></li><li class="dropdown-item"><!----> <a href="/network/" class="nav-link router-link-active">
+  网络通信
+</a></li><li class="dropdown-item"><!----> <a href="/vue.html" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/算法/" class="nav-link">
+  算法
+</a></li></ul></div></div><div class="nav-item"><a href="/about.html" class="nav-link">
+  关于
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/network/" aria-current="page" class="sidebar-link">网络通信</a></li><li><a href="/network/三次握手四次挥手.html" class="active sidebar-link">三次握手四次挥手</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/network/三次握手四次挥手.html#tcp报文" class="sidebar-link">TCP报文</a></li><li class="sidebar-sub-header"><a href="/network/三次握手四次挥手.html#三次握手" class="sidebar-link">三次握手</a></li><li class="sidebar-sub-header"><a href="/network/三次握手四次挥手.html#四次挥手" class="sidebar-link">四次挥手</a></li></ul></li><li><a href="/network/通信协议.html" class="sidebar-link">通信协议</a></li><li><a href="/network/DNS详解.html" class="sidebar-link">DNS详解</a></li><li><a href="/network/HTTP响应状态码.html" class="sidebar-link">HTTP响应状态码</a></li><li><a href="/network/session、token、cookie.html" class="sidebar-link">session、token、cookie</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="详解三次握手与四次挥手"><a href="#详解三次握手与四次挥手" class="header-anchor">#</a> 详解三次握手与四次挥手</h1> <p>平时我们经常会听到三次握手和四次挥手，他们到底是什么意思呢？其实所谓的握手和挥手，就是客户端和服务器端建立和断开TCP连接的过程，下面进行详细解释。</p> <h2 id="tcp报文"><a href="#tcp报文" class="header-anchor">#</a> TCP报文</h2> <p>在开始讲解之前，我们要先了解一下TCP报文和它的标志位。TCP报文就是握手和挥手时发送的数据，它包含了几个重要的字段：</p> <blockquote><p>序号：seq，占32位，标识源端到目的端发送的字节流；</p></blockquote> <blockquote><p>确认号：ack，占32位，ack=收到字节流的seq+1，只有在ACK标志位为1时才有效；</p></blockquote> <blockquote><p>标志位：</p></blockquote> <ol><li>URG  紧急指针有效</li> <li>ACK  确认序号有效</li> <li>PSH  接收方应该尽快将这个报文交给应用层</li> <li>RST  重置连接</li> <li>SYN  发起一个新连接</li> <li>FIN  释放一个连接</li></ol> <hr> <h2 id="三次握手"><a href="#三次握手" class="header-anchor">#</a> 三次握手</h2> <p><img src="/img/%E7%BD%91%E7%BB%9C%E9%80%9A%E4%BF%A1/%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B.jpg" alt="三次握手"></p> <p><strong>第一次握手：</strong><br>
+客户端想创建一个TCP连接，先要向服务器端发送一段报文，告诉服务器端“我想创建一个连接”。这段报文包含了标志位SYN=1，序号seq=x，之后客户端进入SYNSENT状态。</p> <p><strong>第二次握手：</strong><br>
+服务器端在LISTEN状态等待接收来自客户端的信息，接收到第一次握手后，发送一段确认报文，告诉客户端“我准备好了”，报文包含标志位SYN=1，ACK=1，seq=y，ack=x+1。这里的ack是在客户端发送过来的seq的基础上加1得到的。发送完这段报文，服务器就进入SYNRCVD状态。</p> <p><strong>第三次握手：</strong><br>
+客户端接收到第二次握手后，再发送最后一段报文，告诉服务器“我收到你的确认信息了”，报文包含标志位ACK=1，seq=x+1，ack=y+1。这里客户端发送的seq等于第二次握手时接收到的ack，而发送的ack等于接收到的seq+1。发送之后客户端就进入ESTABLISHED状态，服务器端接收到最后一次握手后也进入ESTABLISHED状态，就可以正式开始传输数据了。</p> <p>看到这里你可能会有疑问，为什么要三次握手才能建立TCP连接而不是两次？</p> <p>我们可以设想一下，假如只通过两次握手建立连接，那服务器端在接收到第一次握手后就会认为连接已经成功建立，会正式开启端口，并把确认信息发送回客户端，可是如果这个确认信息在网路传输中丢失了，会出现什么情况？</p> <p>客户端一直收不到确认信息，就会保持等待接收确认消息的状态，而另一边认为连接成功建立的服务器端已经正式发送业务数据，客户端会对这些数据视而不见，死锁就发生了。</p> <p>即使客户端设置了发送请求后一段时间内未收到应答则重新发送请求，但在这段时间服务器端口一直是打开的，一旦这样的情况变多，就会大大占用服务器资源。</p> <hr> <h2 id="四次挥手"><a href="#四次挥手" class="header-anchor">#</a> 四次挥手</h2> <p><img src="/img/%E7%BD%91%E7%BB%9C%E9%80%9A%E4%BF%A1/%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B.jpg" alt="四次挥手"></p> <p><strong>第一次挥手：</strong><br>
+四次挥手就是TCP连接释放的过程，客户端发送第一次挥手后进入FIN-WAIT-1状态（半关闭状态），不再向服务器发送报文之外的数据。这段报文包含标志位FIN=1，seq=u。</p> <p><strong>第二次挥手和第三次挥手：</strong><br>
+服务器端接收到连接断开请求后，会发出一段响应报文（包含ACK=1，seq=v，ack=u+1）通知客户端：“我已收到断开连接请求，但仍需准备”。原因是这时候服务器可能还在处理一些数据，等到数据处理完毕后，服务器再次发送一段报文，（包含FIN=1，ACK=1，seq=w，ack=u+1）告诉服务器“我准备好了，随时可以断开”。</p> <p><strong>第四次挥手：</strong><br>
+客户端接收到第一次确认报文到接收第二次确认报文之间的状态称为FIN-WAIT-2，之后客户端会发送最后一段报文（ACK=1，seq=u+1，ack=w+1）等待2MSL，进入CLOSED状态，正式关闭客户端到服务器端的连接。服务器端接收到第四次挥手则立即关闭服务器端到客户端的连接。</p> <blockquote><p>Q：为什么客户端要等待2MSL？MSL是什么？</p></blockquote> <blockquote><p>A：MSL是TCP报文在传输过程中的最大生命周期。如果服务器端发送第三次挥手后的2MSL时间里没有接收到第四次挥手，就会重新发送第三次挥手，客户端在2MSL的时间内再次收到了来自服务器端的报文，说明第四次挥手没有被正确的传输，于是重新发送第四次挥手并重置等待时间。如果2MSL内没有收到服务器端任何消息，说明报文被正常的接受了，这时候客户端才安心关闭连接。</p></blockquote></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/network/" class="prev router-link-active">
+        网络通信
+      </a></span> <span class="next"><a href="/network/通信协议.html">
+        通信协议
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.65ca9bb5.js" defer></script><script src="/assets/js/2.14a13fa9.js" defer></script><script src="/assets/js/26.07102b13.js" defer></script>
+  </body>
+</html>

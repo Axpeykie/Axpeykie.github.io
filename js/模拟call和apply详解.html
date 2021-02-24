@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>认识call | Axpeykie&#39;s blog</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    
+    <meta name="description" content="share!">
+    
+    <link rel="preload" href="/assets/css/0.styles.e4d8b86b.css" as="style"><link rel="preload" href="/assets/js/app.65ca9bb5.js" as="script"><link rel="preload" href="/assets/js/2.14a13fa9.js" as="script"><link rel="preload" href="/assets/js/16.f0a5d30e.js" as="script"><link rel="prefetch" href="/assets/js/10.2f94525b.js"><link rel="prefetch" href="/assets/js/11.6a5cc2f2.js"><link rel="prefetch" href="/assets/js/12.90aa9cb7.js"><link rel="prefetch" href="/assets/js/13.475ad283.js"><link rel="prefetch" href="/assets/js/14.6cb0a9fd.js"><link rel="prefetch" href="/assets/js/15.7b3ce09f.js"><link rel="prefetch" href="/assets/js/17.ea63d749.js"><link rel="prefetch" href="/assets/js/18.b5af9e97.js"><link rel="prefetch" href="/assets/js/19.7e6f0376.js"><link rel="prefetch" href="/assets/js/20.b943776b.js"><link rel="prefetch" href="/assets/js/21.cd936ef8.js"><link rel="prefetch" href="/assets/js/22.66334dda.js"><link rel="prefetch" href="/assets/js/23.49c91fd5.js"><link rel="prefetch" href="/assets/js/24.f58389e9.js"><link rel="prefetch" href="/assets/js/25.cc2a94e5.js"><link rel="prefetch" href="/assets/js/26.07102b13.js"><link rel="prefetch" href="/assets/js/27.50cef554.js"><link rel="prefetch" href="/assets/js/28.f5f36556.js"><link rel="prefetch" href="/assets/js/29.6a3fa8c9.js"><link rel="prefetch" href="/assets/js/3.32769151.js"><link rel="prefetch" href="/assets/js/30.8d82b854.js"><link rel="prefetch" href="/assets/js/4.63745a10.js"><link rel="prefetch" href="/assets/js/5.e36bd015.js"><link rel="prefetch" href="/assets/js/6.1017c97b.js"><link rel="prefetch" href="/assets/js/7.b60ae1a9.js"><link rel="prefetch" href="/assets/js/8.2523b28c.js"><link rel="prefetch" href="/assets/js/9.aa7b199d.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.e4d8b86b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Axpeykie's blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="博文" class="dropdown-title"><span class="title">博文</span> <span class="arrow down"></span></button> <button type="button" aria-label="博文" class="mobile-dropdown-title"><span class="title">博文</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/js/" class="nav-link router-link-active">
+  JS
+</a></li><li class="dropdown-item"><!----> <a href="/css.html" class="nav-link">
+  css
+</a></li><li class="dropdown-item"><!----> <a href="/network/" class="nav-link">
+  网络通信
+</a></li><li class="dropdown-item"><!----> <a href="/vue.html" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/算法/" class="nav-link">
+  算法
+</a></li></ul></div></div><div class="nav-item"><a href="/about.html" class="nav-link">
+  关于
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="博文" class="dropdown-title"><span class="title">博文</span> <span class="arrow down"></span></button> <button type="button" aria-label="博文" class="mobile-dropdown-title"><span class="title">博文</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/js/" class="nav-link router-link-active">
+  JS
+</a></li><li class="dropdown-item"><!----> <a href="/css.html" class="nav-link">
+  css
+</a></li><li class="dropdown-item"><!----> <a href="/network/" class="nav-link">
+  网络通信
+</a></li><li class="dropdown-item"><!----> <a href="/vue.html" class="nav-link">
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/算法/" class="nav-link">
+  算法
+</a></li></ul></div></div><div class="nav-item"><a href="/about.html" class="nav-link">
+  关于
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/js/闭包.html" class="sidebar-link">闭包</a></li><li><a href="/js/节流防抖.html" class="sidebar-link">节流防抖</a></li><li><a href="/js/类型判断.html" class="sidebar-link">类型判断</a></li><li><a href="/js/模拟call、apply、bind.html" class="sidebar-link">模拟call、apply、bind</a></li><li><a href="/js/模拟call和apply详解.html" class="active sidebar-link">模拟call和apply详解</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/js/模拟call和apply详解.html#认识call" class="sidebar-link">认识call</a></li><li class="sidebar-sub-header"><a href="/js/模拟call和apply详解.html#实现绑定this" class="sidebar-link">实现绑定this</a></li><li class="sidebar-sub-header"><a href="/js/模拟call和apply详解.html#实现传入多个参数" class="sidebar-link">实现传入多个参数</a></li><li class="sidebar-sub-header"><a href="/js/模拟call和apply详解.html#实现隐式转换" class="sidebar-link">实现隐式转换</a></li></ul></li><li><a href="/js/模拟new.html" class="sidebar-link">模拟new</a></li><li><a href="/js/深浅拷贝.html" class="sidebar-link">深浅拷贝</a></li><li><a href="/js/事件循环.html" class="sidebar-link">事件循环</a></li><li><a href="/js/数据结构和算法.html" class="sidebar-link">数据结构和算法</a></li><li><a href="/js/原型原型链.html" class="sidebar-link">原型原型链</a></li><li><a href="/js/作用域执行上下文.html" class="sidebar-link">作用域执行上下文</a></li><li><a href="/js/defineProperty.html" class="sidebar-link">defineProperty</a></li><li><a href="/js/this.html" class="sidebar-link">this</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="认识call"><a href="#认识call" class="header-anchor">#</a> 认识call</h2> <p>模拟call方法之前，我们先通过ES5规范了解一下call的特性。这里引用ES5规范英文版15.3.4.4部分的内容。</p> <p><strong>15.3.4.4Function.prototype.call (thisArg [ , arg1 [ , arg2, … ] ] )</strong></p> <blockquote><p>When the call method is called on an object func with argument thisArg and optional arguments arg1, arg2 etc, the following steps are taken:
+当以 thisArg 和可选的 arg1, arg2 等等作为参数在一个 func 对象上调用 call 方法，采用如下步骤：</p></blockquote> <blockquote><p>If IsCallable(func) is false, then throw a TypeError exception.
+Let argList be an empty List.
+If this method was called with more than one argument then in left to right order starting with arg1 append each argument as the last element of argList
+Return the result of calling the [[Call]] internal method of func, providing thisArg as the this value and argList as the list of arguments.
+The length property of the call method is 1.
+如果 IsCallable(func) 是 false, 则抛出一个 TypeError 异常。
+令 argList 为一个空列表。
+如果调用这个方法的参数多余一个，则从 arg1 开始以从左到右的顺序将每个参数插入为 argList 的最后一个元素。
+提供 thisArg 作为 this 值并以 argList 作为参数列表，调用 func 的 [[Call]] 内部方法，返回结果。
+call 方法的 length 属性是 1。</p></blockquote> <blockquote><p>NOTEThe thisArg value is passed without modification as the this value. This is a change from Edition 3, where a undefined or null thisArg is replaced with the global object and ToObject is applied to all other values and that result is passed as the this value.
+在外面传入的 thisArg 值会修改并成为 this 值。thisArg 是 undefined 或 null 时它会被替换成全局对象，所有其他值会被应用 ToObject 并将结果作为 this 值，这是第三版引入的更改。</p></blockquote> <p>简单来说就是：</p> <ol><li>函数调用call方法时，会把第一个参数绑定函数的this，并将后续的参数（假如有的话）作为函数的实参传入。</li> <li>如果call方法的调用者不是函数会产生一个错误。</li> <li>如果call方法的第一个参数是null或undefined，会被隐式转换为全局对象。</li> <li>最后返回函数的调用结果。<br>
+以上也是我们模拟的call方法应该达到的效果。</li></ol> <h2 id="实现绑定this"><a href="#实现绑定this" class="header-anchor">#</a> 实现绑定this</h2> <p>this的值由函数的调用方式决定，一旦函数被调用，this就被确定下来，且不能更改。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">var</span> obj2 <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token function-variable function">test</span><span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">this</span> <span class="token operator">=</span> obj2<span class="token punctuation">;</span> <span class="token comment">//报错</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+obj<span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>因此，要实现把函数的this绑定到指定的对象，得在函数被调用前完成。<br>
+我们可以在目标对象内创建一个属性，属性值是函数的引用，在对象内部调用这个引用，并在函数执行完毕后删除属性。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token class-name">Function</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">call2</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">obj</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    obj<span class="token punctuation">.</span>fun <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span> <span class="token comment">//此处this是调用call2方法的函数</span>
+    <span class="token comment">//dosomething...</span>
+    <span class="token keyword">delete</span> obj<span class="token punctuation">.</span>fun
+<span class="token punctuation">}</span>
+</code></pre></div><p>测试一下：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token class-name">Function</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">call2</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">obj</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    obj<span class="token punctuation">.</span>fun <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+    obj<span class="token punctuation">.</span><span class="token function">fun</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">delete</span> obj<span class="token punctuation">.</span>fun
+<span class="token punctuation">}</span>
+<span class="token keyword">var</span> obj2 <span class="token operator">=</span> <span class="token punctuation">{</span>
+    name<span class="token operator">:</span> <span class="token string">&quot;tom&quot;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> obj1 <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token function-variable function">person</span><span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+obj1<span class="token punctuation">.</span>person<span class="token punctuation">.</span><span class="token function">call2</span><span class="token punctuation">(</span>obj2<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//&quot;tom&quot;</span>
+</code></pre></div><p>可以看到，person函数的this被绑定到了obj2</p> <hr> <h2 id="实现传入多个参数"><a href="#实现传入多个参数" class="header-anchor">#</a> 实现传入多个参数</h2> <p>我们已经做到了绑定this的值，接下来让call2方法能够传入多个参数给函数调用。<br>
+考虑到传入参数的数量是不确定的，我们可以使用ES6的扩展运算符。同时，如果函数调用后有返回值，让call2方法返回这个返回值。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token class-name">Function</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">call2</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">obj</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> args <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> arguments<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        args<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>arguments<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    obj<span class="token punctuation">.</span>fun <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+    <span class="token keyword">var</span> result <span class="token operator">=</span> obj<span class="token punctuation">.</span><span class="token function">fun</span><span class="token punctuation">(</span><span class="token operator">...</span>args<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">delete</span> obj<span class="token punctuation">.</span>fun
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>result<span class="token punctuation">)</span> <span class="token keyword">return</span> result<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>测试一下：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">var</span> obj2 <span class="token operator">=</span> <span class="token punctuation">{</span>
+    name<span class="token operator">:</span> <span class="token string">&quot;tom&quot;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> obj1 <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token function-variable function">person</span><span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">arg1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token punctuation">,</span> arg1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token string">'boy'</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> sex <span class="token operator">=</span> obj1<span class="token punctuation">.</span>person<span class="token punctuation">.</span><span class="token function">call2</span><span class="token punctuation">(</span>obj2<span class="token punctuation">,</span> <span class="token number">17</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//&quot;tom&quot; 17</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>sex<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//&quot;boy&quot;</span>
+
+</code></pre></div><p>如果不使用扩展运算符，可以用eval代替，这里不提供使用eval的方法。</p> <hr> <h2 id="实现隐式转换"><a href="#实现隐式转换" class="header-anchor">#</a> 实现隐式转换</h2> <p>如果call方法传入了null或undefined作为第一参数，null或undefined会被隐式转换为全局对象。在浏览器环境中是window对象。我们可以在call2方法的头部对传入的参数进行一个判断，如果参数是null或undefined就将window对象绑定到函数的this。哦哦对了，别忘了对call2的调用者进行校验，不是函数的话要抛出一个TypeError<br>
+最终版代码如下：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token class-name">Function</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">call2</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">obj</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> <span class="token keyword">this</span> <span class="token operator">!==</span> <span class="token string">'function'</span><span class="token punctuation">)</span> <span class="token keyword">throw</span> <span class="token string">'TypeError:'</span> <span class="token operator">+</span> <span class="token keyword">this</span> <span class="token operator">+</span> <span class="token string">'is not a function'</span>
+    <span class="token keyword">var</span> obj <span class="token operator">=</span> obj <span class="token operator">||</span> window<span class="token punctuation">;</span>
+    <span class="token keyword">var</span> args <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> arguments<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        args<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>arguments<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    obj<span class="token punctuation">.</span>fun <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+    <span class="token keyword">var</span> result <span class="token operator">=</span> obj<span class="token punctuation">.</span><span class="token function">fun</span><span class="token punctuation">(</span><span class="token operator">...</span>args<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>result<span class="token punctuation">)</span> <span class="token keyword">return</span> result<span class="token punctuation">;</span>
+    <span class="token keyword">delete</span> obj<span class="token punctuation">.</span>fun
+<span class="token punctuation">}</span>
+</code></pre></div><p>到此我们已经学会模拟call方法了，如果想模拟apply方法，只需要对传入参数的部分略加修改即可。</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/js/模拟call、apply、bind.html" class="prev">
+        模拟call、apply、bind
+      </a></span> <span class="next"><a href="/js/模拟new.html">
+        模拟new
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.65ca9bb5.js" defer></script><script src="/assets/js/2.14a13fa9.js" defer></script><script src="/assets/js/16.f0a5d30e.js" defer></script>
+  </body>
+</html>
